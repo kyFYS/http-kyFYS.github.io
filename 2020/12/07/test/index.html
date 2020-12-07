@@ -470,14 +470,14 @@
             <div id="articleContent">
                 <p>很久之前就想写博客了，来记录一些学习过程中遇到的问题和学到的知识，现在开始写我的第一篇博客<strong>Typora</strong> 的配置 和基础语法</p>
 <hr>
-<p>#一、 安装</p>
+<p>##一、 安装</p>
 <p>首先访问Typora的官网 <a target="_blank" rel="noopener" href="https://typora.io/">Typora — a markdown editor, markdown reader.</a></p>
 <p>翻到最底下</p>
 <p><img src="/2020/12/07/test/image-20201206171748941.png" alt="image-20201206171748941"></p>
 <p>选择你需要的下载即可</p>
 <p>安装过程就是傻瓜式安装</p>
 <hr>
-<h1 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h1><p>可能刚接触的小伙伴看着空白的背景不知道该怎么办</p>
+<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>可能刚接触的小伙伴看着空白的背景不知道该怎么办</p>
 <p>Typora是md 文本编辑器</p>
 <p>点击左上角的文件找到打开 就可以选择你所想要编辑的md文件</p>
 <hr>
@@ -506,7 +506,7 @@
 <p>设置大概就是这个样子了</p>
 <p>接下来讲一些Markdown语法吧</p>
 <hr>
-<h1 id="三、语法"><a href="#三、语法" class="headerlink" title="三、语法"></a>三、语法</h1><p>Ctrl  + 1-6 分别为 1-6级标题</p>
+<h2 id="三、语法"><a href="#三、语法" class="headerlink" title="三、语法"></a>三、语法</h2><p>Ctrl  + 1-6 分别为 1-6级标题</p>
 <p>Ctrl + b 加粗</p>
 <p>Ctrl + I 斜体</p>
 <p>Ctrl + u 下划线</p>
@@ -538,7 +538,7 @@
 <p>[toc]创建目录</p>
 <p>具体的语法可查阅官方文档</p>
 <hr>
-<h1 id="四、新建"><a href="#四、新建" class="headerlink" title="四、新建"></a>四、新建</h1><p>由于我是 Hexo</p>
+<h2 id="四、新建"><a href="#四、新建" class="headerlink" title="四、新建"></a>四、新建</h2><p>由于我是 Hexo</p>
 <p>所以我去文件的根目录下 hexo n name 来创建的 （使用其他方法创建可能会导致图片无法显示的问题） </p>
 <hr>
 <p>谢谢观看</p>
@@ -919,7 +919,7 @@
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h1, h2, h3, h4'
+            headingSelector: 'h2, h3, h4'
         });
 
         // modify the toc link href to support Chinese.
@@ -931,7 +931,7 @@
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+        $('#articleContent').children('h2, h3, h4').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
