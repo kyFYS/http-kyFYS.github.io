@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Typora, kyFYS~">
+    <meta name="keywords" content="Vue, kyFYS~">
     <meta name="description" content="记录所学知识点">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Typora | kyFYS~</title>
+    <title>Vue | kyFYS~</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Typora</h1>
+                    <h1 class="description center-align post-title">Vue</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%85%8D%E7%BD%AE/">
-                                <span class="chip bg-color">配置</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
                             </a>
                         
                     </div>
@@ -447,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-12-07
+                    2020-12-08
                 </div>
                 
 
@@ -468,79 +468,173 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>很久之前就想写博客了，来记录一些学习过程中遇到的问题和学到的知识，现在开始写我的第一篇博客<strong>Typora</strong> 的配置 和基础语法</p>
+                <h2 id="为什么要使用Vue"><a href="#为什么要使用Vue" class="headerlink" title="为什么要使用Vue"></a>为什么要使用Vue</h2><p>在JavaScript中操作DOM是十分昂贵的，Vue的核心是虚拟DOM 使用虚拟DOM可以减少DOM的操作，</p>
+<p>vue会检测出当前的DOM需要重绘和重排的位置，并分析出以最小的代价的方式作用到真实的DOM中</p>
+<p>从而增加性能  JavaScript属于model  DOM属于view 两者是无关的 每次两者连接需要消耗性能</p>
+<p>vue使用MVVM的模型，M（模型）， V（视图）， VM（视图模型）</p>
+<p>这样M V之间没有直接的联系 V M 分别于 VM交互  V中数据发生变化可以通过 VM同步到M中</p>
+<p>M中数据发生变化的时候也可以通过VM同步到V中</p>
 <hr>
-<h2 id="一、-安装"><a href="#一、-安装" class="headerlink" title="一、 安装"></a>一、 安装</h2><p>首先访问Typora的官网 <a target="_blank" rel="noopener" href="https://typora.io/">Typora — a markdown editor, markdown reader.</a></p>
-<p>翻到最底下</p>
-<p><img src="/2020/12/07/test/image-20201206171748941.png" alt="image-20201206171748941"></p>
-<p>选择你需要的下载即可</p>
-<p>安装过程就是傻瓜式安装</p>
-<hr>
-<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>可能刚接触的小伙伴看着空白的背景不知道该怎么办</p>
-<p>Typora是md 文本编辑器</p>
-<p>点击左上角的文件找到打开 就可以选择你所想要编辑的md文件</p>
-<hr>
-<p>在编辑前 首先勾选一些设置可以让编写更加方便</p>
-<p>左上角文件偏好设置</p>
-<p><img src="/2020/12/07/test/image-20201206173346720.png" alt="image-20201206173346720"></p>
-<p><img src="/2020/12/07/test/image-20201206174049987.png" alt="image-20201206174049987"></p>
-<p>首先将自动保存勾选  最重要的就是勾选 开启调试模式</p>
-<p>这时候右键点击会多出一项  检查元素 这就和浏览器的调试者模式一样</p>
-<p><img src="/2020/12/07/test/image-20201206174732705.png" alt="image-20201206174732705"></p>
-<p>这是我感觉Typora最强大的功能</p>
-<p>外观保持不变</p>
-<p>编辑器</p>
-<p><img src="/2020/12/07/test/image-20201206173507843.png" alt="image-20201206173507843"></p>
-<p>图像</p>
-<p><img src="/2020/12/07/test/image-20201206173705248.png" alt="image-20201206173705248"></p>
-<p>这样才可以让浏览你博客的人也可以看见图片</p>
-<p>Markdown:arrow_down:</p>
-<p><img src="/2020/12/07/test/image-20201206173813050.png" alt="image-20201206173813050"></p>
-<p>比如上图中的 下标  h<del>2</del>o 当然这些设置完了记得重启</p>
-<p>还有视图选项</p>
-<p>里面有个源代码模式 点击勾选</p>
-<p><img src="/2020/12/07/test/image-20201206174920381.png" alt="image-20201206174920381"></p>
-<p><img src="/2020/12/07/test/image-20201206174938033.png" alt="image-20201206174938033"></p>
-<p>就会变成这个样子</p>
-<p>设置大概就是这个样子了</p>
-<p>接下来讲一些Markdown语法吧</p>
-<hr>
-<h2 id="三、语法"><a href="#三、语法" class="headerlink" title="三、语法"></a>三、语法</h2><p>Ctrl  + 1-6 分别为 1-6级标题</p>
-<p>Ctrl + b 加粗</p>
-<p>Ctrl + I 斜体</p>
-<p>Ctrl + u 下划线</p>
-<p>Ctrl + alt + s 删除线</p>
-<p>Ctrl + k 超链接</p>
-<p>Ctrl + T 表格</p>
-<!-- --> 注释
+<h2 id="vue构造函数"><a href="#vue构造函数" class="headerlink" title="vue构造函数"></a>vue构造函数</h2><h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><p>在vue官网下载 vue.js 然后将vue.js放入项目中的js文件夹下 然后使用语句导入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&quot;js/vue.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">三个&#96;&#96;&#96;即可创建此代码块</span><br></pre></td></tr></table></figure>
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>每个vue.js 的应用都需要通过构造函数创建一个vue实例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    <span class="comment">//选项</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>三个—创建分割线</p>
-<hr>
+<h3 id="1-挂载元素el"><a href="#1-挂载元素el" class="headerlink" title="1.挂载元素el"></a>1.挂载元素el</h3><p>el 选项 为vue实例提供挂载元素 定义挂载元素之后 接下来的全部操作都在该元素内进行 元素外部不受影响</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;box&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;box&quot;</span>&gt;</span><br><span class="line">    &lt;h3&gt;网站名称&#123;&#123;name&#125;&#125;&lt;/h3&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> demo=<span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">&#x27;#box&#x27;</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            name : <span class="string">&#x27;&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-data"><a href="#2-data" class="headerlink" title="2.data"></a>2.data</h3><p>用来储存数据 可以是数组 也可以是对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> demo=<span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">&#x27;#box&#x27;</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            name : <span class="string">&#x27;&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"> &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-方法method"><a href="#3-方法method" class="headerlink" title="3.方法method"></a>3.方法method</h3><p>可以定义方法也就是函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;box&quot;</span>&gt;</span><br><span class="line">    &lt;h3&gt;&#123;&#123;showinfo&#125;&#125;&lt;/h3&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> demo = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">&quot;box&quot;</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            name:<span class="string">&#x27;&#x27;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        method:&#123;</span><br><span class="line">            showinfo:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">this</span>.name</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-过滤器filter"><a href="#4-过滤器filter" class="headerlink" title="4.过滤器filter"></a>4.过滤器filter</h3><p>由于插值中不能使用复杂的运算（不能return 判断）</p>
+<p>所以使用过滤器</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;box&quot;</span>&gt;</span><br><span class="line">    &lt;h3&gt;&#123;&#123;title | substr&#125;&#125;&lt;<span class="regexp">/h3&gt;  /</span><span class="regexp">/filter的用法</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> vm=<span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">&quot;#box&quot;</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">        title:<span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">           filter:&#123;</span><br><span class="line">                   subser:<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;  <span class="comment">//value就是前一个参数</span></span><br><span class="line">                       <span class="keyword">if</span> (value.length&gt;<span class="number">10</span>)</span><br><span class="line">                           &#123;</span><br><span class="line">                               <span class="keyword">return</span> value.substr(<span class="number">0</span>,<span class="number">10</span>)+<span class="string">&quot;...&quot;</span>;</span><br><span class="line">                           &#125;</span><br><span class="line">                        <span class="keyword">else</span>&#123;</span><br><span class="line">                            <span class="keyword">return</span> value;</span><br><span class="line">                        &#125;</span><br><span class="line">                   &#125;</span><br><span class="line">              &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-计算属性computed"><a href="#5-计算属性computed" class="headerlink" title="5.计算属性computed"></a>5.计算属性computed</h3><p>当计算属性所依赖的值发生变化的时候 这个属性会自动更新</p>
+<p>感觉和filter和computed很像 但是具体细节还是不同的 在使用中慢慢体会吧</p>
+<p>区别在于filter一般用于渲染</p>
+<p>而其他方面都是使用computed</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;box&quot;</span>&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123;thename&#125;&#125;&lt;<span class="regexp">/p&gt;/</span><span class="regexp">/会自动更新</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> vm=<span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">&quot;#box&quot;</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            name:<span class="string">&#x27;&#x27;</span>;<span class="comment">//所依赖的值</span></span><br><span class="line">        &#125;,</span><br><span class="line">        computed:&#123;</span><br><span class="line">                thename&#123;</span><br><span class="line">                get:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="built_in">this</span>.name;</span><br><span class="line">                &#125;,</span><br><span class="line">                set:<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">                    <span class="built_in">this</span>.name=value;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    vm.thename=<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">        </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-监听属性"><a href="#6-监听属性" class="headerlink" title="6.监听属性"></a>6.监听属性</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        data:&#123;</span><br><span class="line">            fullname:<span class="string">&#x27;&#x27;</span><span class="comment">//函数要与你想监听的那个变量保持同名</span></span><br><span class="line">        &#125;,</span><br><span class="line">        watch:&#123;</span><br><span class="line">            fullname:<span class="function"><span class="keyword">function</span>(<span class="params"><span class="keyword">new</span>, old</span>)//<span class="title">old</span>不能写在<span class="title">new</span>前面要不然接收不到参数</span></span><br><span class="line"><span class="function">            </span>&#123;</span><br><span class="line">                alert(原值：<span class="string">&quot;old&quot;</span>新值：<span class="string">&quot;new&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;)</span><br><span class="line">vm.fullname=<span class="string">&#x27;&#x27;</span><span class="comment">//这个值会传入函数作为第一个参数</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>如果data中的值是一个对象 那么watch中药加一个属性 deep:true</li>
+</ul>
+<h2 id="vue指令"><a href="#vue指令" class="headerlink" title="vue指令"></a>vue指令</h2><h3 id="1-v-bind"><a href="#1-v-bind" class="headerlink" title="1.v-bind"></a>1.v-bind</h3><p>它是带有v前缀的特殊属性，<strong>指令用于在绑定表达式的值发生改变时将这种数据的变化应用到DOM上</strong></p>
+<p>这样就是不用管DOM的变化的变化 提高程序的可维护性</p>
+<p>v-bind 简写为 :</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;p :src=<span class="string">&quot;imagesrc&quot;</span>&gt;&lt;<span class="regexp">/p&gt;  /</span><span class="regexp">/改变data中的数据时这里也会自动改变</span></span><br><span class="line"><span class="regexp">&lt;script type=&quot;text/</span>javascript<span class="string">&quot;&gt;</span></span><br><span class="line"><span class="string">    var vm =new Vue(&#123;</span></span><br><span class="line"><span class="string">        data:&#123;</span></span><br><span class="line"><span class="string">            imagesrc:&#x27;&#x27;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-v-on"><a href="#2-v-on" class="headerlink" title="2.v-on"></a>2.v-on</h3><p>给DOM事件绑定一些方法</p>
+<p>比如给click绑定 自己写的js代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;box&quot;</span>&gt;</span><br><span class="line">    &lt;button v-on:click=<span class="string">&quot;count&quot;</span>&gt;计数&lt;/button&gt;</span><br><span class="line">    &lt;p&gt;次数&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> vm=<span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">&quot;#box&quot;</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            counts:<span class="number">0</span></span><br><span class="line">        &#125;,</span><br><span class="line">        method:&#123;</span><br><span class="line">            count:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">            </span>&#123;</span><br><span class="line">                counts++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-v-show"><a href="#3-v-show" class="headerlink" title="3.v-show"></a>3.v-show</h3><p>v-show是根据表达式的值来判断是否显示或者隐藏DOM元素，当表达式的值为TRUE时显示</p>
+<p>与v-if相比 v-show是调整css的display 而不是直接移除</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-show=<span class="string">&quot;&quot;</span>&gt;<span class="comment">//根据v-show值的TRUE/FALSE来判断是否显示此图片</span></span><br><span class="line">    &lt;img src=<span class="string">&quot;&quot;</span>&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-v-model"><a href="#4-v-model" class="headerlink" title="4.v-model"></a>4.v-model</h3><p>v-model 会根据控件类型自动选取正确的方法来更新元素 </p>
+<ul>
+<li>单行多行文本框</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;box&quot;</span>&gt;</span><br><span class="line">    &lt;p&gt;单行文本框&lt;/p&gt;</span><br><span class="line">    &lt;<span class="keyword">import</span> v-model=<span class="string">&quot;message&quot;</span> placeholder=<span class="string">&quot;单击此处进行编辑&quot;</span>&gt;</span><br><span class="line">    &lt;p&gt;当前输入：&#123;&#123;message&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> vm=<span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">&quot;#box&quot;</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            message:<span class="string">&#x27;&#x27;</span><span class="comment">//v-model可以获取输入的内容 并且给绑定的message p标签可以获取message</span></span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>通用修饰符<strong>lazy</strong>  </li>
+</ul>
 <blockquote>
-<p>Ctrl + shrift + q 引用  </p>
+<p>v-model.lazy</p>
 </blockquote>
-<p>双击enter退出引用</p>
-<p>shrift + CTRL + I 创建图片路径</p>
-<p>-+空格 创建列表 tab 处理缩进</p>
+<p>默认情况下v-model会在input时间中将文本框的值与数据进行同步</p>
+<p>也就是你在文本框中输入东西的时候数据已经开始同步了</p>
+<p>加了lazy后在触发change数据之后才会同步 也就是在你输入的时候不会同步</p>
+<p>在你运行程序的时候才会触发change</p>
 <ul>
-<li><ul>
-<li>​    </li>
+<li>通用修饰符 trim</li>
 </ul>
-</li>
-</ul>
-<p>-+空格+[ ]+空格</p>
+<p>自动过滤输入的字符串的收尾空格</p>
+<h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><p>条件判断在任何语法中都是很重要的部分</p>
+<p>v-if语句用法就是判断true/false</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;box&quot;</span>&gt;</span><br><span class="line">    &lt;p v-<span class="keyword">if</span>=<span class="string">&quot;a&gt;b&quot;</span>&gt;显示&lt;/P&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> vm=<span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        a:<span class="number">100</span>;</span><br><span class="line">        b:<span class="number">200</span>;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>v-else-if</p>
+<p>必须跟在v-if后</p>
+<p>v-else </p>
+<p>必须跟在v-if 或者 v-else-if</p>
+<h3 id="template"><a href="#template" class="headerlink" title="template"></a>template</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;template v-<span class="keyword">if</span>=<span class="string">&quot;&quot;</span>&gt;</span><br><span class="line">    &lt;p&gt;...&lt;/p&gt;</span><br><span class="line">    &lt;p&gt;...&lt;/p&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<p>可以将相同判断条件的东西放在template下</p>
+<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><p>用于列表的渲染</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;box&quot;</span>&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li v-<span class="keyword">for</span>=<span class="string">&quot;item in items&quot;</span>&gt;&#123;&#123;item.name&#125;&#125;&lt;/li&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> demo =<span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">&quot;#box&quot;</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            item:[</span><br><span class="line">                &#123;<span class="attr">name</span>:<span class="string">&#x27;&#x27;</span>&#125;,</span><br><span class="line">                &#123;<span class="attr">name</span>:<span class="string">&#x27;&#x27;</span>&#125;,</span><br><span class="line">                &#123;<span class="attr">name</span>:<span class="string">&#x27;&#x27;</span>&#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>同时循环还支持下标追踪</p>
+<p>将上文代码中第三行</p>
+<blockquote>
+<li v-for="(item,index) in items">-></li>
+</blockquote>
+<p>同理for也可以使用template来循环</p>
+<p>数组数据更新</p>
+<table>
+<thead>
+<tr>
+<th align="center">push()</th>
+<th><strong>向数组末尾添加一个或者多个元素</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">pop()</td>
+<td>将数组中的最后一个元素删除</td>
+</tr>
+<tr>
+<td align="center">shift()</td>
+<td>将数组中的第一个元素删除</td>
+</tr>
+<tr>
+<td align="center">unshift()</td>
+<td>向数组开头添加一个或者多个元素</td>
+</tr>
+<tr>
+<td align="center">splice()</td>
+<td>添加或者删除数组中的元素</td>
+</tr>
+<tr>
+<td align="center">sort()</td>
+<td>对数组的元素进行排序</td>
+</tr>
+<tr>
+<td align="center">reverse()</td>
+<td>颠倒数组中的排序</td>
+</tr>
+</tbody></table>
+<p>上述的这些方法是改变原来的数组</p>
+<p>还有些方法是返回新的数组</p>
+<p>filter()  concat()  slice()</p>
 <ul>
-<li><input disabled type="checkbox"> </li>
+<li>还有全局方法 Vue.set(array, index,value)</li>
 </ul>
-<p>[toc]创建目录</p>
-<p>具体的语法可查阅官方文档</p>
+<h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><blockquote>
+<p>vue-router</p>
+</blockquote>
+<p>需要下载插件 使用script标签引入</p>
+<blockquote>
+<p><router-link to=" "></router-link></p>
+<p><router-view></router-view></p>
+</blockquote>
+<p>具体用法百度即可</p>
+<h2 id="axios实现Ajax"><a href="#axios实现Ajax" class="headerlink" title="axios实现Ajax"></a>axios实现Ajax</h2><blockquote>
+<p>axios.js.min.js</p>
+</blockquote>
+<p>可以完成get/post请求</p>
+<p>具体用法百度即可</p>
 <hr>
-<h2 id="四、新建"><a href="#四、新建" class="headerlink" title="四、新建"></a>四、新建</h2><p>由于我是 Hexo</p>
-<p>所以我去文件的根目录下 hexo n name 来创建的 （使用其他方法创建可能会导致图片无法显示的问题） </p>
-<hr>
-<p>谢谢观看</p>
+<p>谢谢观看！</p>
 
                 
             </div>
@@ -567,7 +661,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kyFYS.github.io/2020/12/07/test/">https://kyFYS.github.io/2020/12/07/test/</a>
+                    <a href="https://kyFYS.github.io/2020/12/08/vuejs/">https://kyFYS.github.io/2020/12/08/vuejs/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -605,8 +699,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%85%8D%E7%BD%AE/">
-                                    <span class="chip bg-color">配置</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
                                 </a>
                             
                         </div>
@@ -776,9 +870,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2020/12/08/vuejs/">
                     <div class="card-image">
@@ -796,9 +891,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -807,6 +902,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -822,7 +918,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/12/07/test/">
@@ -852,7 +948,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
