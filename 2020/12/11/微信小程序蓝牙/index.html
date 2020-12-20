@@ -710,10 +710,10 @@
 <p>今天来记录一下js中的函数参数的传递：</p>
 <p>由于我长期使用Python  c++ 对于js 的参数传递有些不懂</p>
 <p>一.可以理解的但是不知道具体</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201218235642935.png" alt="image-20201218235642935"></p>
+<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201218235642935.png" alt="image-20201218235642935"></p>
 <p>可以理解为上面的微信接口 的结果  success是这个接口的一个回调函数， 可以将成功后后端产生的数据接收</p>
 <p>二 .无法理解的</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201218235749066.png" alt="image-20201218235749066"></p>
+<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201218235749066.png" alt="image-20201218235749066"></p>
 <p>像这个普通的函数 却可以接收到一个不知道从哪里来的数据 </p>
 <p>后来了解到 这个是一个点击事件 传回来的对象 以前只知道点击可以绑定一个事件 并且在触发的时候调用</p>
 <p>这个事件 但是不知道 还会给这个事件传递一个对象</p>
@@ -726,14 +726,14 @@
 
 
 <p>可以试一下</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219000022040.png" alt="image-20201219000022040"></p>
+<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219000022040.png" alt="image-20201219000022040"></p>
 <p>打印出来的效果</p>
 <blockquote>
 <p>参考： <a target="_blank" rel="noopener" href="https://my.oschina.net/u/265943/blog/753556">https://my.oschina.net/u/265943/blog/753556</a></p>
 </blockquote>
 <p>js 微信小程序 写法还是有挺多不同的</p>
 <p>函数的命名方法</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219223018998.png" alt="image-20201219223018998"></p>
+<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219223018998.png" alt="image-20201219223018998"></p>
 <p>js 命名函数可以使用构造函数 任何使用new的创建方式都是调用构造函数</p>
 <p>第二种  function 函数名（参数）{函数体}</p>
 <p>第三种 var 函数名 = function（参数）{函数体}</p>
@@ -742,7 +742,7 @@
 <p>二 不用构造函数 var x={ xxx:xxxx,xx:xxx}</p>
 <p>js 的函数和c函数可以说是一模一样 只能说微信小程序的函数不太一样</p>
 <p>特殊类型：</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219224234230.png" alt="image-20201219224234230"></p>
+<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219224234230.png" alt="image-20201219224234230"></p>
 <p>立即执行函数 </p>
 <p>不知道有什么用</p>
 <p>js的对象 和c++的类一样 类里的函数叫做方法</p>
@@ -754,10 +754,10 @@
 <p>这个工作是由解释器来做的</p>
 <p>函数在外部被调用的时候 this 指向的是window</p>
 <p>在类内被调用那么指向的就是object</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219230344652.png" alt="image-20201219230344652"></p>
+<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219230344652.png" alt="image-20201219230344652"></p>
 <p>由于是隐含的参数所以可以 调用</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219230409370.png" alt="image-20201219230409370"></p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219230606642.png" alt="image-20201219230606642"></p>
+<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219230409370.png" alt="image-20201219230409370"></p>
+<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219230606642.png" alt="image-20201219230606642"></p>
 
                 
             </div>
