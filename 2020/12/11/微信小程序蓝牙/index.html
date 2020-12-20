@@ -469,8 +469,15 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>一个蓝牙连接交互的教程</p>
-<hr>
-<p>测试一下document.write  和 console.log  好久没用了</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h2 id="API简介"><a href="#API简介" class="headerlink" title="API简介"></a>API简介</h2><ul>
+<li>微信小程序目前有蓝牙 API 共 18 个</li>
+</ul>
+<ol>
+<li>操作蓝牙适配器的共有 4 个，分别是<br> wx.openBluetoothAdapter 初始化蓝牙适配器<br> wx.closeBluetoothAdapter 关闭蓝牙模块<br> wx.getBluetoothAdapterState 获取本机蓝牙适配器状态<br> wx.onBluetoothAdapterStateChange 监听蓝牙适配器状态变化事件</li>
+<li>连接前使用的共有 4 个，分别是<br> wx.startBluetoothDevicesDiscovery 开始搜寻附近的蓝牙外围设备<br> wx.stopBluetoothDevicesDiscovery 停止搜寻附近的蓝牙外围设备<br> wx.getBluetoothDevices 获取所有已发现的蓝牙设备<br> wx.onBluetoothDeviceFound 监听寻找到新设备的事件</li>
+<li>连接和断开时使用的共有 2 个，分别是<br> wx.createBLEConnection 连接低功耗蓝牙设备<br> wx.closeBLEConnection 断开与低功耗蓝牙设备的连接</li>
+<li>连接成功后使用的共有 8 个，分别是<br> wx.getConnectedBluetoothDevices 根据 uuid 获取处于已连接状态的设备<br> wx.getBLEDeviceServices 获取蓝牙设备所有 service（服务）<br> wx.getBLEDeviceCharacteristics  获取蓝牙设备所有 characteristic（特征值）<br> wx.readBLECharacteristicValue  读取低功耗蓝牙设备的特征值的二进制数据值<br> wx.writeBLECharacteristicValue 向低功耗蓝牙设备特征值中写入二进制数据<br> wx.notifyBLECharacteristicValueChange  启用低功耗蓝牙设备特征值变化时的 notify 功能<br> wx.onBLECharacteristicValueChange 监听低功耗蓝牙设备的特征值变化<br> wx.onBLEConnectionStateChange 监听低功耗蓝牙连接的错误事件</li>
+</ol>
 <h2 id="一-wx-openBluetoothAdapter-Object-object"><a href="#一-wx-openBluetoothAdapter-Object-object" class="headerlink" title="一.wx.openBluetoothAdapter(Object object)"></a>一.wx.openBluetoothAdapter(Object object)</h2><p>调用这个API来初始化蓝牙</p>
 <p>主要的使用方法就是</p>
 <table>
@@ -698,6 +705,8 @@
 <p>ble蓝牙是否自带service 并且可以主动知道</p>
 <p>found 返回的decevic 是undefined是否是设备原因</p>
 <p>可以修改一下将 值为undefined的设备不加入显示名单</p>
+<p>未完待续·········</p>
+<h3 id="END"><a href="#END" class="headerlink" title="END"></a>END</h3><p>记录一些学习</p>
 <p>今天来记录一下js中的函数参数的传递：</p>
 <p>由于我长期使用Python  c++ 对于js 的参数传递有些不懂</p>
 <p>一.可以理解的但是不知道具体</p>
