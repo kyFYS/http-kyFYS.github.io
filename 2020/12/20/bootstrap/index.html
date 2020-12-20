@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="微信小程序蓝牙, kyFYS~">
+    <meta name="keywords" content="Bootstrap, kyFYS~">
     <meta name="description" content="记录所学知识点">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>微信小程序蓝牙 | kyFYS~</title>
+    <title>Bootstrap | kyFYS~</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">微信小程序蓝牙</h1>
+                    <h1 class="description center-align post-title">Bootstrap</h1>
                 </div>
             </div>
         </div>
@@ -447,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-12-11
+                    2020-12-20
                 </div>
                 
 
@@ -468,296 +468,31 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>一个蓝牙连接交互的教程</p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h2 id="API简介"><a href="#API简介" class="headerlink" title="API简介"></a>API简介</h2><ul>
-<li>微信小程序目前有蓝牙 API 共 18 个</li>
-</ul>
-<ol>
-<li>操作蓝牙适配器的共有 4 个，分别是<br> wx.openBluetoothAdapter 初始化蓝牙适配器<br> wx.closeBluetoothAdapter 关闭蓝牙模块<br> wx.getBluetoothAdapterState 获取本机蓝牙适配器状态<br> wx.onBluetoothAdapterStateChange 监听蓝牙适配器状态变化事件</li>
-<li>连接前使用的共有 4 个，分别是<br> wx.startBluetoothDevicesDiscovery 开始搜寻附近的蓝牙外围设备<br> wx.stopBluetoothDevicesDiscovery 停止搜寻附近的蓝牙外围设备<br> wx.getBluetoothDevices 获取所有已发现的蓝牙设备<br> wx.onBluetoothDeviceFound 监听寻找到新设备的事件</li>
-<li>连接和断开时使用的共有 2 个，分别是<br> wx.createBLEConnection 连接低功耗蓝牙设备<br> wx.closeBLEConnection 断开与低功耗蓝牙设备的连接</li>
-<li>连接成功后使用的共有 8 个，分别是<br> wx.getConnectedBluetoothDevices 根据 uuid 获取处于已连接状态的设备<br> wx.getBLEDeviceServices 获取蓝牙设备所有 service（服务）<br> wx.getBLEDeviceCharacteristics  获取蓝牙设备所有 characteristic（特征值）<br> wx.readBLECharacteristicValue  读取低功耗蓝牙设备的特征值的二进制数据值<br> wx.writeBLECharacteristicValue 向低功耗蓝牙设备特征值中写入二进制数据<br> wx.notifyBLECharacteristicValueChange  启用低功耗蓝牙设备特征值变化时的 notify 功能<br> wx.onBLECharacteristicValueChange 监听低功耗蓝牙设备的特征值变化<br> wx.onBLEConnectionStateChange 监听低功耗蓝牙连接的错误事件</li>
-</ol>
-<h2 id="一-wx-openBluetoothAdapter-Object-object"><a href="#一-wx-openBluetoothAdapter-Object-object" class="headerlink" title="一.wx.openBluetoothAdapter(Object object)"></a>一.wx.openBluetoothAdapter(Object object)</h2><p>调用这个API来初始化蓝牙</p>
-<p>主要的使用方法就是</p>
-<table>
-<thead>
-<tr>
-<th align="left">属性</th>
-<th align="left">类型</th>
-<th align="left">默认值</th>
-<th align="left">必填</th>
-<th align="left">说明</th>
-<th align="left">最低版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">mode</td>
-<td align="left">string</td>
-<td align="left">central</td>
-<td align="left">否</td>
-<td align="left">蓝牙模式，可作为主/从设备，仅 iOS 需要。</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html">2.10.0</a></td>
-</tr>
-<tr>
-<td align="left">success</td>
-<td align="left">function</td>
-<td align="left"></td>
-<td align="left">否</td>
-<td align="left">接口调用成功的回调函数</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">fail</td>
-<td align="left">function</td>
-<td align="left"></td>
-<td align="left">否</td>
-<td align="left">接口调用失败的回调函数</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">complete</td>
-<td align="left">function</td>
-<td align="left"></td>
-<td align="left">否</td>
-<td align="left">接口调用结束的回调函数（调用成功、失败都会执行）</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<p>比如我们可以使用success来检测是否调用成功</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wx.openBluetoothAdapter(&#123;</span><br><span class="line">  success (res) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<p>根据返回值确定</p>
-<table>
-<thead>
-<tr>
-<th align="left">错误码</th>
-<th align="left">错误信息</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">0</td>
-<td align="left">ok</td>
-<td align="left">正常</td>
-</tr>
-<tr>
-<td align="left">-1</td>
-<td align="left">already connet</td>
-<td align="left">已连接</td>
-</tr>
-<tr>
-<td align="left">10000</td>
-<td align="left">not init</td>
-<td align="left">未初始化蓝牙适配器</td>
-</tr>
-<tr>
-<td align="left">10001</td>
-<td align="left">not available</td>
-<td align="left">当前蓝牙适配器不可用</td>
-</tr>
-<tr>
-<td align="left">10002</td>
-<td align="left">no device</td>
-<td align="left">没有找到指定设备</td>
-</tr>
-<tr>
-<td align="left">10003</td>
-<td align="left">connection fail</td>
-<td align="left">连接失败</td>
-</tr>
-<tr>
-<td align="left">10004</td>
-<td align="left">no service</td>
-<td align="left">没有找到指定服务</td>
-</tr>
-<tr>
-<td align="left">10005</td>
-<td align="left">no characteristic</td>
-<td align="left">没有找到指定特征值</td>
-</tr>
-<tr>
-<td align="left">10006</td>
-<td align="left">no connection</td>
-<td align="left">当前连接已断开</td>
-</tr>
-<tr>
-<td align="left">10007</td>
-<td align="left">property not support</td>
-<td align="left">当前特征值不支持此操作</td>
-</tr>
-<tr>
-<td align="left">10008</td>
-<td align="left">system error</td>
-<td align="left">其余所有系统上报的异常</td>
-</tr>
-<tr>
-<td align="left">10009</td>
-<td align="left">system not support</td>
-<td align="left">Android 系统特有，系统版本低于 4.3 不支持 BLE</td>
-</tr>
-<tr>
-<td align="left">10012</td>
-<td align="left">operate time out</td>
-<td align="left">连接超时</td>
-</tr>
-<tr>
-<td align="left">10013</td>
-<td align="left">invalid_data</td>
-<td align="left">连接 deviceId 为空或者是格式不正确</td>
-</tr>
-</tbody></table>
-<h2 id="二-wx-onBluetoothDeviceFound-function-callback"><a href="#二-wx-onBluetoothDeviceFound-function-callback" class="headerlink" title="二.wx.onBluetoothDeviceFound(function callback)"></a>二.wx.onBluetoothDeviceFound(function callback)</h2><p>寻找蓝牙设备</p>
-<blockquote>
-<h3 id="function-callback"><a href="#function-callback" class="headerlink" title="function callback"></a>function callback</h3><p>寻找到新设备的事件的回调函数</p>
+                <h2 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h2><p>Bootstrap是美国<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Twitter/2443267">Twitter</a>公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/JavaScript/321142">JavaScript</a> 开发的简洁、直观、强悍的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%89%8D%E7%AB%AF/5956545">前端</a>开发框架，使得 Web 开发更加快捷。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Less">Less</a>写成。Bootstrap一经推出后颇受欢迎，一直是<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/GitHub">GitHub</a>上的热门开源项目，包括<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/NASA">NASA</a>的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。 [1] 国内一些移动开发者较为熟悉的框架，如<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/WeX5">WeX5</a>前端开源框架等，也是基于Bootstrap源码进行性能优化而来。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><blockquote>
+<p>bootstrap的中文网站 <a target="_blank" rel="noopener" href="https://v3.bootcss.com/">https://v3.bootcss.com/</a></p>
 </blockquote>
-<h5 id="object-res"><a href="#object-res" class="headerlink" title="object res"></a>object res</h5><table>
-<thead>
-<tr>
-<th align="left">属性</th>
-<th align="left">类型</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">devices</td>
-<td align="left">Array.<Object></Object></td>
-<td align="left">新搜索到的设备列表</td>
-</tr>
-</tbody></table>
-<p><strong>res.devices 的结构</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">属性</th>
-<th align="left">类型</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">name</td>
-<td align="left">string</td>
-<td align="left">蓝牙设备名称，某些设备可能没有</td>
-</tr>
-<tr>
-<td align="left">deviceId</td>
-<td align="left">string</td>
-<td align="left">用于区分设备的 id</td>
-</tr>
-<tr>
-<td align="left">RSSI</td>
-<td align="left">number</td>
-<td align="left">当前蓝牙设备的信号强度</td>
-</tr>
-<tr>
-<td align="left">advertisData</td>
-<td align="left">ArrayBuffer</td>
-<td align="left">当前蓝牙设备的广播数据段中的 ManufacturerData 数据段。</td>
-</tr>
-<tr>
-<td align="left">advertisServiceUUIDs</td>
-<td align="left">Array.<string></string></td>
-<td align="left">当前蓝牙设备的广播数据段中的 ServiceUUIDs 数据段</td>
-</tr>
-<tr>
-<td align="left">localName</td>
-<td align="left">string</td>
-<td align="left">当前蓝牙设备的广播数据段中的 LocalName 数据段</td>
-</tr>
-<tr>
-<td align="left">serviceData</td>
-<td align="left">Object</td>
-<td align="left">当前蓝牙设备的广播数据段中的 ServiceData 数据段</td>
-</tr>
-</tbody></table>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ab2hex</span>(<span class="params">buffer</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> hexArr = <span class="built_in">Array</span>.prototype.map.call(</span><br><span class="line">    <span class="keyword">new</span> <span class="built_in">Uint8Array</span>(buffer),</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">bit</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> (<span class="string">&#x27;00&#x27;</span> + bit.toString(<span class="number">16</span>)).slice(-<span class="number">2</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  )</span><br><span class="line">  <span class="keyword">return</span> hexArr.join(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">wx.onBluetoothDeviceFound(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> devices = res.devices;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;new device list has founded&#x27;</span>)</span><br><span class="line">  <span class="built_in">console</span>.dir(devices)</span><br><span class="line">  <span class="built_in">console</span>.log(ab2hex(devices[<span class="number">0</span>].advertisData))</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/12/20/bootstrap/images/bootstrap/image-20201220150927225.png" alt="image-20201220150927225"></p>
+<p><img src="/2020/12/20/bootstrap/images/bootstrap/image-20201220150950112.png" alt="image-20201220150950112"></p>
+<p>下载之后将文件放在项目的目录下即可通过引用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>安卓下部分机型需要有位置权限才能搜索到设备，需留意是否开启了位置权限</li>
-</ul>
-<h2 id="三-wx-onBluetoothAdapterStateChange-function-callback"><a href="#三-wx-onBluetoothAdapterStateChange-function-callback" class="headerlink" title="三.wx.onBluetoothAdapterStateChange(function callback)"></a>三.wx.onBluetoothAdapterStateChange(function callback)</h2><p>蓝牙适配器</p>
+<p>同时需要jQuery的支持</p>
+<p>去官网下载引入即可</p>
+<h2 id="为什么使用"><a href="#为什么使用" class="headerlink" title="为什么使用"></a>为什么使用</h2><p>我们在开发前端页面的时候，如果每一个按钮、样式、处理浏览器兼容性的代码都要自己从零开始去写，那就太浪费时间了。所以我们需要一个<strong>框架</strong>，帮我们实现一个页面的<strong>基础部分</strong>和解决一些<strong>繁琐的细节</strong>，只要在它的基础上进行<strong>个性化定制</strong>就可以了。</p>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>在刚接触到的时候一时间也不知道如何使用</p>
+<p><img src="/2020/12/20/bootstrap/images/bootstrap/image-20201220170152599.png" alt="image-20201220170152599"></p>
+<p>可以看到这个css文件里有定义很多的样式但是 你不知道名字怎么用</p>
 <blockquote>
-<h3 id="function-callback-1"><a href="#function-callback-1" class="headerlink" title="function callback"></a>function callback</h3><p>蓝牙适配器状态变化事件的回调函数</p>
+<p>菜鸟教程 <a target="_blank" rel="noopener" href="https://www.runoob.com/bootstrap/bootstrap-tutorial.html">https://www.runoob.com/bootstrap/bootstrap-tutorial.html</a></p>
 </blockquote>
-<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><h5 id="Object-res"><a href="#Object-res" class="headerlink" title="Object res"></a>Object res</h5><table>
-<thead>
-<tr>
-<th align="left">属性</th>
-<th align="left">类型</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">available</td>
-<td align="left">boolean</td>
-<td align="left">蓝牙适配器是否可用</td>
-</tr>
-<tr>
-<td align="left">discovering</td>
-<td align="left">boolean</td>
-<td align="left">蓝牙适配器是否处于搜索状态</td>
-</tr>
-</tbody></table>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.onBluetoothAdapterStateChange(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;adapterState changed, now is&#x27;</span>, res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>ble蓝牙是否自带service 并且可以主动知道</p>
-<p>found 返回的decevic 是undefined是否是设备原因</p>
-<p>可以修改一下将 值为undefined的设备不加入显示名单</p>
-<p>未完待续·········</p>
-<h3 id="END"><a href="#END" class="headerlink" title="END"></a>END</h3><p>记录一些学习</p>
-<p>今天来记录一下js中的函数参数的传递：</p>
-<p>由于我长期使用Python  c++ 对于js 的参数传递有些不懂</p>
-<p>一.可以理解的但是不知道具体</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201218235642935.png" alt="image-20201218235642935"></p>
-<p>可以理解为上面的微信接口 的结果  success是这个接口的一个回调函数， 可以将成功后后端产生的数据接收</p>
-<p>二 .无法理解的</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201218235749066.png" alt="image-20201218235749066"></p>
-<p>像这个普通的函数 却可以接收到一个不知道从哪里来的数据 </p>
-<p>后来了解到 这个是一个点击事件 传回来的对象 以前只知道点击可以绑定一个事件 并且在触发的时候调用</p>
-<p>这个事件 但是不知道 还会给这个事件传递一个对象</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">id</span>=<span class="string">&quot;tapTest&quot;</span> <span class="attr">data-hi</span>=<span class="string">&quot;MINA&quot;</span> <span class="attr">bindtap</span>=<span class="string">&quot;tapName&quot;</span>&gt;</span> Click me! <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  tapName: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(event.target)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<p>可以试一下</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219000022040.png" alt="image-20201219000022040"></p>
-<p>打印出来的效果</p>
-<blockquote>
-<p>参考： <a target="_blank" rel="noopener" href="https://my.oschina.net/u/265943/blog/753556">https://my.oschina.net/u/265943/blog/753556</a></p>
-</blockquote>
-<p>js 微信小程序 写法还是有挺多不同的</p>
-<p>函数的命名方法</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219223018998.png" alt="image-20201219223018998"></p>
-<p>js 命名函数可以使用构造函数 任何使用new的创建方式都是调用构造函数</p>
-<p>第二种  function 函数名（参数）{函数体}</p>
-<p>第三种 var 函数名 = function（参数）{函数体}</p>
-<p>类的创建也有两种方法</p>
-<p>一 使用构造函数 var x = new object（） ； x.xxx=xxxx</p>
-<p>二 不用构造函数 var x={ xxx:xxxx,xx:xxx}</p>
-<p>js 的函数和c函数可以说是一模一样 只能说微信小程序的函数不太一样</p>
-<p>特殊类型：</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219224234230.png" alt="image-20201219224234230"></p>
-<p>立即执行函数 </p>
-<p>不知道有什么用</p>
-<p>js的对象 和c++的类一样 类里的函数叫做方法</p>
-<p>在类里定义方法和定义函数方式一模一样</p>
-<p>但是有更加多样的定义方式</p>
-<p>可以在类内 使用外部的函数定义</p>
-<p>这个时候就要提一个东西 this </p>
-<p>在js 中this 是用来指向当前的对象  在调用函数的时候 除了参数以外 还会额外传一个参数给函数</p>
-<p>这个工作是由解释器来做的</p>
-<p>函数在外部被调用的时候 this 指向的是window</p>
-<p>在类内被调用那么指向的就是object</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219230344652.png" alt="image-20201219230344652"></p>
-<p>由于是隐含的参数所以可以 调用</p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219230409370.png" alt="image-20201219230409370"></p>
-<p><img src="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/images/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/image-20201219230606642.png" alt="image-20201219230606642"></p>
+<p>但是我更推荐去官网 看</p>
+<p><img src="/2020/12/20/bootstrap/images/bootstrap/image-20201220170813753.png" alt="image-20201220170813753"></p>
+<p>找到你想用的一些样式 </p>
+<p>时间久了 就会熟练</p>
+<p>使用bootstrap只是一个辅助工具 并不是整个网站都是用它来做</p>
+<p>把它当做一个工具方便开发就好了</p>
+<p>帮助你作出更好看的网页</p>
 
                 
             </div>
@@ -784,7 +519,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kyFYS.github.io/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/">https://kyFYS.github.io/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/</a>
+                    <a href="https://kyFYS.github.io/2020/12/20/bootstrap/">https://kyFYS.github.io/2020/12/20/bootstrap/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -993,9 +728,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2020/12/20/bootstrap/">
                     <div class="card-image">
@@ -1013,9 +749,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1024,6 +760,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1042,13 +779,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/08/vuejs/">
+                <a href="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Vue">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="微信小程序蓝牙">
                         
-                        <span class="card-title">Vue</span>
+                        <span class="card-title">微信小程序蓝牙</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1059,7 +796,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-11
                             </span>
                         <span class="publish-author">
                             
