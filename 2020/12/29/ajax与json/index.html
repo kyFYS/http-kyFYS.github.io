@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Bootstrap, kyFYS~">
+    <meta name="keywords" content="ajax与json, kyFYS~">
     <meta name="description" content="记录所学知识点">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Bootstrap | kyFYS~</title>
+    <title>ajax与json | kyFYS~</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -315,7 +315,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Bootstrap</h1>
+                    <h1 class="description center-align post-title">ajax与json</h1>
                 </div>
             </div>
         </div>
@@ -447,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-12-20
+                    2020-12-29
                 </div>
                 
 
@@ -468,79 +468,139 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h2><p>Bootstrap是美国<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Twitter/2443267">Twitter</a>公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/JavaScript/321142">JavaScript</a> 开发的简洁、直观、强悍的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%89%8D%E7%AB%AF/5956545">前端</a>开发框架，使得 Web 开发更加快捷。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Less">Less</a>写成。Bootstrap一经推出后颇受欢迎，一直是<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/GitHub">GitHub</a>上的热门开源项目，包括<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/NASA">NASA</a>的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。 [1] 国内一些移动开发者较为熟悉的框架，如<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/WeX5">WeX5</a>前端开源框架等，也是基于Bootstrap源码进行性能优化而来。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><blockquote>
-<p>bootstrap的中文网站 <a target="_blank" rel="noopener" href="https://v3.bootcss.com/">https://v3.bootcss.com/</a></p>
-</blockquote>
-<p><img src="/2020/12/20/bootstrap/image-20201220150927225.png" alt="image-20201220150927225"></p>
-<p><img src="/2020/12/20/bootstrap/image-20201220150950112.png" alt="image-20201220150950112"></p>
-<p>下载之后将文件放在项目的目录下即可通过引用</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="AJAX前端"><a href="#AJAX前端" class="headerlink" title="AJAX前端"></a>AJAX前端</h2><p><img src="/2020/12/29/ajax%E4%B8%8Ejson/image-20201229215429148.png" alt="image-20201229215429148"></p>
+<p>在 w3c官方文档里有介绍ajax的写法 当然这是原生的js写法 后面还会介绍jQuery 的ajax写法</p>
+<h3 id="原生js"><a href="#原生js" class="headerlink" title="原生js"></a>原生js</h3><p>1 创建对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xmlhttp;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest)</span><br><span class="line">  &#123;<span class="comment">// code for IE7+, Firefox, Chrome, Opera, Safari</span></span><br><span class="line">  xmlhttp=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">  &#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  &#123;<span class="comment">// code for IE6, IE5</span></span><br><span class="line">  xmlhttp=<span class="keyword">new</span> ActiveXObject(<span class="string">&quot;Microsoft.XMLHTTP&quot;</span>);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
-<p>同时需要jQuery的支持</p>
-<p>去官网下载引入即可</p>
-<h2 id="为什么使用"><a href="#为什么使用" class="headerlink" title="为什么使用"></a>为什么使用</h2><p>我们在开发前端页面的时候，如果每一个按钮、样式、处理浏览器兼容性的代码都要自己从零开始去写，那就太浪费时间了。所以我们需要一个<strong>框架</strong>，帮我们实现一个页面的<strong>基础部分</strong>和解决一些<strong>繁琐的细节</strong>，只要在它的基础上进行<strong>个性化定制</strong>就可以了。</p>
-<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>在刚接触到的时候一时间也不知道如何使用</p>
-<p><img src="/2020/12/20/bootstrap/image-20201220170152599.png" alt="image-20201220170152599"></p>
-<p>可以看到这个css文件里有定义很多的样式但是 你不知道名字怎么用</p>
+
+
+<p>2 请求</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.open(<span class="string">&quot;GET&quot;</span>,<span class="string">&quot;test1.txt&quot;</span>,<span class="literal">true</span>);</span><br><span class="line">xmlhttp.send();</span><br></pre></td></tr></table></figure>
+
+
+
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>open(<em>method</em>,<em>url</em>,<em>async</em>)</td>
+<td>规定请求的类型、URL 以及是否异步处理请求。 <em>method</em>：请求的类型；GET 或 POST  <em>url</em>：文件在服务器上的位置  <em>async</em>：true（异步）或 false（同步）</td>
+</tr>
+<tr>
+<td>send(<em>string</em>)</td>
+<td>将请求发送到服务器。 <em>string</em>：仅用于 POST 请求</td>
+</tr>
+</tbody></table>
+<p>3 接收</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x =xmlhttp.responseText;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4 控制</p>
+<p><strong>onreadystatechange 事件</strong></p>
+<p>当请求被发送到服务器时，我们需要执行一些基于响应的任务。</p>
+<p>每当 readyState 改变时，就会触发 onreadystatechange 事件。</p>
+<p>readyState 属性存有 XMLHttpRequest 的状态信息。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onreadystatechange</td>
+<td>存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。</td>
+</tr>
+<tr>
+<td>readyState</td>
+<td>存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。 0: 请求未初始化  1: 服务器连接已建立  2: 请求已接收  3: 请求处理中  4: 请求已完成，且响应已就绪</td>
+</tr>
+<tr>
+<td>status</td>
+<td>200: “OK” 404: 未找到页面</td>
+</tr>
+</tbody></table>
+<p>在 onreadystatechange 事件中，我们规定当服务器响应已做好被处理的准备时所执行的任务。</p>
+<p>当 readyState 等于 4 且状态为 200 时，表示响应已就绪：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (xmlhttp.readyState==<span class="number">4</span> &amp;&amp; xmlhttp.status==<span class="number">200</span>)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">&quot;myDiv&quot;</span>).innerHTML=xmlhttp.responseText;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>以上是前端的部分 实际开发中还需后端的配合 </p>
+<p>ajax 是前后端通过json来交换信息的过程</p>
+<h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><p>1 ajax()方法  （默认有jQuery基础）</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jQuery.ajax([settings])</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>settings</em></td>
+<td>可选。用于配置 Ajax 请求的键值对集合。 可以通过 $.ajaxSetup() 设置任何选项的默认值。</td>
+</tr>
+</tbody></table>
+<p>所有参数都是可选的 详情可去</p>
 <blockquote>
-<p>菜鸟教程 <a target="_blank" rel="noopener" href="https://www.runoob.com/bootstrap/bootstrap-tutorial.html">https://www.runoob.com/bootstrap/bootstrap-tutorial.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/jquery/ajax_ajax.asp">https://www.w3school.com.cn/jquery/ajax_ajax.asp</a></p>
 </blockquote>
-<p>但是我更推荐去官网 看</p>
-<p><img src="/2020/12/20/bootstrap/image-20201220170813753.png" alt="image-20201220170813753"></p>
-<p>找到你想用的一些样式 </p>
-<p>时间久了 就会熟练</p>
-<p>使用bootstrap只是一个辅助工具 并不是整个网站都是用它来做</p>
-<p>把它当做一个工具方便开发就好了</p>
-<p>帮助你作出更好看的网页</p>
-<p><strong>只要你有良好的css基础 当你想做某种样式的时候在官网根据关键词查找 总能找到的</strong></p>
-<h2 id="常见的用法"><a href="#常见的用法" class="headerlink" title="常见的用法"></a>常见的用法</h2><h3 id="1-栅格"><a href="#1-栅格" class="headerlink" title="1.栅格"></a>1.栅格</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  //随xxx改变不同样式</span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;xxx&quot;</span>&gt;</span>xx<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          .....</span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这是一个常规的示例 </p>
+<p>回调函数就是成功之后会给你返回一些数据 可以用会调函数来捕获这些数据</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    url:<span class="string">&quot;&quot;</span>,</span><br><span class="line">    type:<span class="string">&quot;&quot;</span>,</span><br><span class="line">    data:&#123;<span class="string">&quot;&quot;</span>:<span class="string">&quot;&quot;</span>&#125;,<span class="comment">//json格式</span></span><br><span class="line">    success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//回调函数</span></span><br><span class="line">    &#125;，</span><br><span class="line">    error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">&#125;,</span><br><span class="line">    datatype:<span class="string">&quot;json&quot;</span></span><br><span class="line">&#125;)；</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">&quot;table-xxx&quot;</span>&gt;</span> //随xxx改变不同样式</span><br><span class="line">    ....</span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>有很多样式 斑马条纹 ，带边框 ….</p>
-<h3 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&#x27;btn-xxx&#x27;</span>&gt;</span>   //随xxx改变不同样式</span><br><span class="line">    ....</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>很多样式，颜色</p>
-<h3 id="表单，标签…-表单中包含很多"><a href="#表单，标签…-表单中包含很多" class="headerlink" title="表单，标签…(表单中包含很多)"></a>表单，标签…(表单中包含很多)</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">&quot;form-xxxx&quot;</span>&gt;</span> //随xxx改变不同样式</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;form-group&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>2 $.get()   get请求</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.get(URL,callback);</span><br></pre></td></tr></table></figure>
 
 
 
+<p>3 $.post()  对应post请求</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.post(URL,data,callback);</span><br></pre></td></tr></table></figure>
 
 
 
-
-<h3 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav-xxx&quot;</span>&gt;</span>  //随xxx改变不同样式</span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&#x27;active&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    .....</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="导航条"><a href="#导航条" class="headerlink" title="导航条"></a>导航条</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">&quot;navbar-xxx&quot;</span>&gt;</span> //随xxx改变不同样式</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p> 实例</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">&quot;navbar navbar-default&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container-fluid&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Brand and toggle get grouped for better mobile display --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;navbar-header&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;navbar-toggle collapsed&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;collapse&quot;</span> <span class="attr">data-target</span>=<span class="string">&quot;#bs-example-navbar-collapse-1&quot;</span> <span class="attr">aria-expanded</span>=<span class="string">&quot;false&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;sr-only&quot;</span>&gt;</span>Toggle navigation<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;navbar-brand&quot;</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Brand<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;collapse navbar-collapse&quot;</span> <span class="attr">id</span>=<span class="string">&quot;bs-example-navbar-collapse-1&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav navbar-nav&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;active&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Link <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;sr-only&quot;</span>&gt;</span>(current)<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;dropdown&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;dropdown-toggle&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;dropdown&quot;</span> <span class="attr">role</span>=<span class="string">&quot;button&quot;</span> <span class="attr">aria-haspopup</span>=<span class="string">&quot;true&quot;</span> <span class="attr">aria-expanded</span>=<span class="string">&quot;false&quot;</span>&gt;</span>Dropdown <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;caret&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;dropdown-menu&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Action<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Another action<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Something else here<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;separator&quot;</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Separated link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;separator&quot;</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>One more separated link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">&quot;navbar-form navbar-left&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;form-group&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;Search&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default&quot;</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav navbar-nav navbar-right&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;dropdown&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;dropdown-toggle&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;dropdown&quot;</span> <span class="attr">role</span>=<span class="string">&quot;button&quot;</span> <span class="attr">aria-haspopup</span>=<span class="string">&quot;true&quot;</span> <span class="attr">aria-expanded</span>=<span class="string">&quot;false&quot;</span>&gt;</span>Dropdown <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;caret&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;dropdown-menu&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Action<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Another action<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Something else here<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;separator&quot;</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Separated link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="comment">&lt;!-- /.navbar-collapse --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="comment">&lt;!-- /.container-fluid --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="巨幕"><a href="#巨幕" class="headerlink" title="巨幕"></a>巨幕</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jumbotron&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary btn-lg&quot;</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">role</span>=<span class="string">&quot;button&quot;</span>&gt;</span>Learn more<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>ajax()是既可以当做get 也可以当做post用 </p>
+<h2 id="json"><a href="#json" class="headerlink" title="json"></a>json</h2><p>在js中一切都是对象 。所以任何js支持的类型都可以通过json来表示</p>
+<p>json语法格式：</p>
+<ul>
+<li>数据在名称/值对中</li>
+<li>数据由逗号分隔</li>
+<li>花括号保存对象</li>
+<li>方括号保存数组</li>
+</ul>
+<p>在js中 键名不用加“ ”  值加“ ”</p>
+<p>在json中键和值都要加“ ”</p>
+<p>对象可以包含多个名称/值对：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">&quot;firstName&quot;</span>:<span class="string">&quot;John&quot;</span> , <span class="attr">&quot;lastName&quot;</span>:<span class="string">&quot;Doe&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
 
 
 
+<p>数组可包含多个对象：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="attr">&quot;employees&quot;</span>: [</span><br><span class="line">&#123; <span class="attr">&quot;firstName&quot;</span>:<span class="string">&quot;John&quot;</span> , <span class="attr">&quot;lastName&quot;</span>:<span class="string">&quot;Doe&quot;</span> &#125;,</span><br><span class="line">&#123; <span class="attr">&quot;firstName&quot;</span>:<span class="string">&quot;Anna&quot;</span> , <span class="attr">&quot;lastName&quot;</span>:<span class="string">&quot;Smith&quot;</span> &#125;,</span><br><span class="line">&#123; <span class="attr">&quot;firstName&quot;</span>:<span class="string">&quot;Peter&quot;</span> , <span class="attr">&quot;lastName&quot;</span>:<span class="string">&quot;Jones&quot;</span> &#125;</span><br><span class="line">]</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
 
 
-<h3 id="下拉列表"><a href="#下拉列表" class="headerlink" title="下拉列表"></a>下拉列表</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>1<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>2<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>3<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>4<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>5<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<p>json和 js之间可以相互转换</p>
+<p>JSON转JS对象</p>
+<blockquote>
+<p>  1、JS自带的eval()函数;</p>
+<p>  2、JSON.parse(str); //str为变量，即json字符串</p>
+</blockquote>
+<p>js对象转json</p>
+<p>JSON.stringify(obj)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> json = &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;iphone&quot;</span>,<span class="string">&quot;price&quot;</span>:<span class="number">666</span>&#125;; <span class="comment">//创建对象；</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> jsonStr = <span class="built_in">JSON</span>.stringify(json);       <span class="comment">//转为JSON字符串</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(jsonStr);</span><br></pre></td></tr></table></figure>
 
-
-<p><strong>其他有需要的样式几乎都可以找到 可以根据 css样式 在官网 Ctrl+f查找</strong></p>
-<h2 id="bootstrap-vue"><a href="#bootstrap-vue" class="headerlink" title="bootstrap+vue"></a>bootstrap+vue</h2><p>bootstrap与 vue的结合</p>
-<p>网页的样式采用bootstrap 数据使用vue中定义的使用v-bind（：）即可</p>
-<p>易于维护</p>
 
                 
             </div>
@@ -567,7 +627,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kyFYS.github.io/2020/12/20/bootstrap/">https://kyFYS.github.io/2020/12/20/bootstrap/</a>
+                    <a href="https://kyFYS.github.io/2020/12/29/ajax%E4%B8%8Ejson/">https://kyFYS.github.io/2020/12/29/ajax%E4%B8%8Ejson/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -776,9 +836,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2020/12/29/ajax%E4%B8%8Ejson/">
                     <div class="card-image">
@@ -796,9 +857,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -807,6 +868,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -825,13 +887,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%93%9D%E7%89%99/">
+                <a href="/2020/12/20/bootstrap/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="微信小程序蓝牙">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Bootstrap">
                         
-                        <span class="card-title">微信小程序蓝牙</span>
+                        <span class="card-title">Bootstrap</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -842,7 +904,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
                             </span>
                         <span class="publish-author">
                             
